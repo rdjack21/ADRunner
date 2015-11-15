@@ -1,0 +1,14 @@
+= Asciidoctor Runner (ADRunner)
+This is a simple application that can be used to translate a AsciiDoc document
+into a HTML document with out the need to install Ruby if you already have
+Java installed.
+
+I will add feature as time permits that will enable more customization. But for
+now you must specify your configuration in your AsciiDoc file itself. You do this
+by setting
+http://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document[attributes]
+in the header of your document. To see an example of this take a look at any of the
+files in my https://github.com/rdjack21/Notes[Notes] repository. Just remember that
+you want the raw file and if you have the asciidoctor viewer installed you will want
+to turn that off as well.
+
