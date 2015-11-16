@@ -1,4 +1,5 @@
 = Asciidoctor Runner (ADRunner)
+
 This is a simple application that can be used to translate a AsciiDoc document
 into a HTML document with out the need to install Ruby if you already have
 Java installed.
@@ -11,4 +12,22 @@ in the header of your document. To see an example of this take a look at any of 
 files in my https://github.com/rdjack21/Notes[Notes] repository. Just remember that
 you want the raw file and if you have the asciidoctor viewer installed you will want
 to turn that off as well.
+
+== Check out and build
+
+Clone the repository then at the command line run:
+----
+mvn clean package assembly:single
+----
+This will place a packaged zip file that contains everything needed to run
+ADRunner.
+
+== How to execute
+
+----
+ADRunner.sh filename1 .. filenameN
+----
+
+If you want to process more than one file at time use shell globs to pass
+in more than one file name at a time.
 

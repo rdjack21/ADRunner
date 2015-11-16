@@ -22,7 +22,7 @@ public class App {
     int argCount = 0;
     for(String param: args) {
       adoc.convertFile(new File(param), new HashMap<String, Object>());
-     System.out.printf("Processed file: %s", param);
+     System.out.printf("Processed file: %s\n", param);
     }
 
   }

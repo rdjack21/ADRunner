@@ -27,7 +27,7 @@
       <directory>${project.build.scriptSourceDirectory}</directory>
       <outputDirectory></outputDirectory>
       <includes>
-        <include>startup.*</include>
+        <include>*</include>
       </includes>
     </fileSet>
     
