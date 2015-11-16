@@ -24,7 +24,7 @@
       startup scripts are copied from the src/main/scripts directory.
     -->
     <fileSet>
-      <directory>${project.build.scriptSourceDirectory}</directory>
+      <directory>${project.build.scriptSourceDir ectory}</directory>
       <outputDirectory></outputDirectory>
       <includes>
         <include>*</include>
@@ -42,5 +42,28 @@
         <include>*.jar</include>
       </includes>
     </fileSet>
+    
+    <!-- 
+      Copy theme CSS files into the distribution zip file.
+    -->
+    <fileSet>
+      <directory>${basedir}/src/main/resources/css</directory>
+      <outputDirectory>css</outputDirectory>
+      <includes>
+        <include>*</include>
+      </includes>
+    </fileSet>
+    <!--
+      Some of the themes require images and such so we grab those as
+      well and place them in the zip file..
+    -->
+    <fileSet>
+      <directory>${basedir}/src/main/resources/images</directory>
+      <outputDirectory>images</outputDirectory>
+      <includes>
+        <include>*</include>
+      </includes>
+    </fileSet>
+     
   </fileSets>
 </assembly>
