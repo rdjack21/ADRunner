@@ -1,12 +1,11 @@
 package net.rslt.asciidoctor;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.StringWriter;
 import java.util.HashMap;
 import org.asciidoctor.Asciidoctor;
+import org.asciidoctor.Attributes;
+import org.asciidoctor.Options;
+import org.asciidoctor.cli.AsciidoctorInvoker;
 
 /**
  * This application is used to parse asciidoctor files with out the need to install ruby.
@@ -14,16 +13,14 @@ import org.asciidoctor.Asciidoctor;
  */
 public class App {
 
-  static String fileToProcess = "/var/code/server/rslt-root/docs/index.adoc";
-  
   public static void main(String[] args) {
-    Asciidoctor adoc = Asciidoctor.Factory.create();
-
-    int argCount = 0;
-    for(String param: args) {
-      adoc.convertFile(new File(param), new HashMap<String, Object>());
-     System.out.printf("Processed file: %s\n", param);
-    }
-
+    
+    // Use the AsciidoctorJ command line processor instead of out own. 
+    // This means we can use the same options as the ruby interface that 
+    // is documented in the official documentation. 
+    
+    AsciidoctorInvoker invoker = new AsciidoctorInvoker();
+    invoker.invoke(args);
+    
   }
 }

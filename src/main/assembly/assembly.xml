@@ -24,7 +24,7 @@
       startup scripts are copied from the src/main/scripts directory.
     -->
     <fileSet>
-      <directory>${project.build.scriptSourceDir ectory}</directory>
+      <directory>${project.build.scriptSourceDirectory}</directory>
       <outputDirectory></outputDirectory>
       <includes>
         <include>*</include>
