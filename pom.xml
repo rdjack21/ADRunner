@@ -4,7 +4,7 @@
 	<groupId>net.rslt.asciidoctor</groupId>
 	<artifactId>ADRunner</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>ADRunner</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -13,6 +13,7 @@
 			<artifactId>asciidoctorj</artifactId>
 			<version>1.5.2</version>
 		</dependency>
+<!-- Remove all the dependancies I thought I was going to need.        
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -38,6 +39,7 @@
 			<artifactId>jopt-simple</artifactId>
 			<version>4.9</version>
 		</dependency>
+-->        
 		<!--
 		<dependency>
 			<groupId>org.apache.commons</groupId>
