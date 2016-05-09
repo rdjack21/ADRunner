@@ -6,51 +6,49 @@
 	<packaging>jar</packaging>
 	<version>0.1</version>
 	<name>ADRunner</name>
-	<url>http://maven.apache.org</url>
+        
+        <properties>
+            <asciidoctorJ.version>1.5.4</asciidoctorJ.version>
+            <stringTemplate.version>4.0.8</stringTemplate.version>
+            <junit.version>3.81</junit.version>
+            <jar.plugin.version>2.6</jar.plugin.version>
+            <assembly.plugin.version>2.6</assembly.plugin.version>
+            <commonsConfiguration.version>2.0</commonsConfiguration.version>
+            <log4j.version>4.5</log4j.version>
+        </properties>
+            
+        
 	<dependencies>
 		<dependency>
 			<groupId>org.asciidoctor</groupId>
 			<artifactId>asciidoctorj</artifactId>
-			<version>1.5.2</version>
+			<version>${asciidoctorJ.version}</version>
 		</dependency>
-<!-- Remove all the dependancies I thought I was going to need.        
+                <dependency>
+                    <groupId>org.antlr</groupId>
+                    <artifactId>ST4</artifactId>
+                    <version>${stringTemplate.version}</version>
+                    <scope>compile</scope>
+                </dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>2.4.1</version>
+			<version>${log4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.4.1</version>
+			<version>${log4j.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>2.4.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.12</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sf.jopt-simple</groupId>
-			<artifactId>jopt-simple</artifactId>
-			<version>4.9</version>
-		</dependency>
--->        
-		<!--
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-configuration2</artifactId>
-			<version>2.0-beta1</version>
+			<version>${commonsConfiguration.version}</version>
 		</dependency>
-		-->		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -60,7 +58,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.6</version>
+          <version>${jar.plugin.version}</version>
           <configuration>
             <archive>
               <manifest>
@@ -74,7 +72,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.6</version>
+          <version>${assembly.plugin.version}</version>
           <configuration>
             <descriptors>
               <descriptor>src/main/assembly/assembly.xml</descriptor>
