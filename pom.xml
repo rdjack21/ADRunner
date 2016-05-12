@@ -10,7 +10,7 @@
         <properties>
             <asciidoctorJ.version>1.5.4</asciidoctorJ.version>
             <stringTemplate.version>4.0.8</stringTemplate.version>
-            <junit.version>3.81</junit.version>
+            <junit.version>4.12</junit.version>
             <jar.plugin.version>2.6</jar.plugin.version>
             <assembly.plugin.version>2.6</assembly.plugin.version>
             <commonsConfiguration.version>2.0</commonsConfiguration.version>
@@ -30,6 +30,7 @@
                     <version>${stringTemplate.version}</version>
                     <scope>compile</scope>
                 </dependency>
+<!--                 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -45,6 +46,7 @@
 			<artifactId>commons-configuration2</artifactId>
 			<version>${commonsConfiguration.version}</version>
 		</dependency>
+-->                                
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
